@@ -3,8 +3,8 @@ import VideoListEntry from '../components/VideoListEntry.js';
 var VideoList = (props) => {
   return(
     <div className="video-list">
-    {props.videos.map(video =>
-      <VideoListEntry video={video}/>
+    {props.videos.map((video) =>
+      <VideoListEntry video={video} clicked={props.click} />
     )}
   </div>
   )};
@@ -19,3 +19,4 @@ VideoList.propTypes = {
 // In the ES6 spec, files are "modules" and do not share a top-level scope.
 // `var` declarations will only exist globally where explicitly defined.
 export default VideoList;
+
